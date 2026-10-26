@@ -45,3 +45,29 @@ I approached this project by breaking the requirements into smaller pieces and g
 ### What do computer scientists do, and why does it matter?
 
 Computer scientists use technology to solve problems and make information easier to work with. In the Grazioso Salvare project, the animal shelter dataset contains thousands of records that would be difficult to search manually. The dashboard turns that data into something useful by allowing rescue staff to quickly identify animals that meet specific training requirements and visualize the results. A system like this can reduce the amount of time spent searching through data and allow an organization to focus more of its time on its actual work.
+
+---
+
+## CS370 Project Two - Pirate Intelligent Agent
+
+[Project notebook](cs370/Jones_Ryan_ProjectTwo.ipynb)
+
+### What code were you given, and what code did you create yourself?
+
+For this project, I worked on a pirate intelligent agent that learns how to navigate a maze and reach the treasure using deep Q-learning. I was given starter code that included the maze environment in `TreasureMaze.py`, the experience replay support in `GameExperience.py`, and a notebook with the game setup, neural network structure, and helper functions. My main contribution was completing the training logic in `qtrain`. This included choosing between exploration and exploitation, storing the agent's experiences, training the network on batches of those experiences, updating a separate target network, and checking whether the agent could consistently reach the treasure. The saved verification run passed the completion check from all 50 eligible starting cells and the gameplay test from the top-left corner.
+
+### What do computer scientists do, and why does it matter?
+
+Computer scientists study problems and develop solutions using algorithms, data, and software. This project showed me how a neural network can work with reinforcement learning to improve an agent's decisions through experience. The same general ideas can apply to problems involving navigation, scheduling, and resource management. Understanding how these systems learn matters because getting a program to produce an answer is only part of the work. I also need to understand whether the answer is reliable and what limits the system has. In this project, success on the supplied maze did not prove that the agent would succeed on a different maze or always find the shortest route.
+
+### How do I approach a problem as a computer scientist?
+
+I approach a problem by understanding the requirements, identifying the inputs and expected results, and breaking the work into smaller pieces. For the pirate agent, this meant understanding how the maze represented states, actions, and rewards before working through the training loop. I checked how the agent selected moves, stored experiences, and used rewards to update its predictions. I then used the training output and completion tests to evaluate whether it was learning successfully. This project reinforced the importance of testing actual behavior instead of assuming that code is correct just because it runs without an error.
+
+### What are my ethical responsibilities to the end user and the organization?
+
+My responsibility is to build systems that are dependable and to be honest about what they can and cannot do. For an intelligent agent, that includes testing its decisions, documenting its limitations, and avoiding claims that go beyond the available evidence. In a real application, I would also need to consider whether the training data or reward system could lead to unfair or harmful behavior, protect any sensitive information, and provide appropriate human oversight. The end user needs a system they can understand and trust, while the organization needs software that meets its requirements without creating avoidable risks.
+
+### AI Assistance Acknowledgment
+
+OpenAI ChatGPT/Codex assisted with troubleshooting, code review, the design defense, submission preparation, and drafting this portfolio reflection.
